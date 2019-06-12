@@ -19,16 +19,16 @@
     </div>
 
     <!--enter tip percentage-->
-    <div id="tipPercentage">
+    <div id="tip">
         <h3>Enter the percentage that you would like to tip:</h3>
         <input type="text" id="tipInput" placeholder=""
             onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input>%
     </div>
 
     <!--enter how many people to split by-->
-    <div id="numberOfGuests">
+    <div id="guests">
         <h3>Enter the number of checks to split by:</h3>
-        <input type="number" id="guestsInput" value="1">
+        <input type="number" id="checksInput" value="1">
     </div>
 
     <br>
@@ -36,26 +36,25 @@
     <button type="submit" id="submit-btn">Calculate</button>
 
     <br>
-    <br>
     <div id="singleBill">
         <!--display tip total-->
-        <div id="tipTotal">
+        <div id="singleTip">
             <h3>Tip Total:</h3>
         </div>
         <br>
         <!--display tip + bill-->
-        <div id="totalPayment">
+        <div id="singleTotal">
             <h3>Total Payment:</h3>
         </div>
     </div>
 
     <br>
     <div id="multipleBill">
-        <div id="tipPerPerson">
+        <div id="multipleTip">
             <h3>Tip Per Person:</h3>
         </div>
         <br>
-        <div id="totalPerPerson">
+        <div id="multipleTotal">
             <h3>Total Per Person:</h3>
         </div>
     </div>
