@@ -14,35 +14,16 @@
     <!--bill goes here-->
     <div id="bill">
         <h3>Enter the bill total:</h3>
-        $<input type="text" id="billInput" placeholder="00.00" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="autoCalc()"></input>
+        $<input type="text" id="billInput" placeholder="00.00" required onkeypress="return isNumberKey(event,this)"
+            onkeyup="suggestedTips()">
     </div>
 
     <!--enter tip percentage-->
     <div id="tipPercentage">
         <h3>Enter the percentage that you would like to tip:</h3>
-        <input type="text" id="tipInput" placeholder="" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input>%
+        <input type="text" id="tipInput" placeholder=""
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input>%
     </div>
-
-    <button type="submit" id="submit-btn">Calculate</button>
-
-    <!--display tip total-->
-    <div id="tipTotal">
-        <h3>Tip Total:</h3>
-    </div>
-
-    <!--display tip + bill-->
-    <div id="totalPayment">
-        <h3>Total Payment:</h3>
-    </div>
-
-    <div id="suggestedTips">
-        <h3>Suggested Tips:</h3>
-        <p id="tenPercent"></p>
-        <p id="fifteenPercent"></p>
-        <p id="eighteenPercent"></p>
-        <p id="twentyPercent"></p>
-    </div>
-
 
     <!--enter how many people to split by-->
     <div id="numberOfGuests">
@@ -50,12 +31,41 @@
         <input type="number" id="guestsInput" value="1">
     </div>
 
-    <div id="tipPerPerson">
-        <h3>Tip Per Person</h3>
+    <br>
+
+    <button type="submit" id="submit-btn">Calculate</button>
+
+    <br>
+    <br>
+    <div id="singleBill">
+        <!--display tip total-->
+        <div id="tipTotal">
+            <h3>Tip Total:</h3>
+        </div>
+        <br>
+        <!--display tip + bill-->
+        <div id="totalPayment">
+            <h3>Total Payment:</h3>
+        </div>
     </div>
 
-    <div id="totalPerPerson">
-        <h3>Total Per Person</h3>
+    <br>
+    <div id="multipleBill">
+        <div id="tipPerPerson">
+            <h3>Tip Per Person:</h3>
+        </div>
+        <br>
+        <div id="totalPerPerson">
+            <h3>Total Per Person:</h3>
+        </div>
+    </div>
+
+    <div id="suggestedTips">
+        <h3>Suggested Tips:</h3>
+        <p id="tenPercent">10%: </p>
+        <p id="fifteenPercent">15%: </p>
+        <p id="eighteenPercent">18%: </p>
+        <p id="twentyPercent">20%: </p>
     </div>
 
 </body>
