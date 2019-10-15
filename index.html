@@ -5,66 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--google font import-->
+    <link href="https://fonts.googleapis.com/css?family=Heebo:300,700|Roboto:300&display=swap" rel="stylesheet">
+    <!--custom style sheet-->
+    <link rel="stylesheet" href="style.css">
     <title>Tip Calculator</title>
 </head>
 
 <body>
-    <h1>Tip Calculator</h1>
+    <div id="container1">
+        <h1>Tip Calculator</h1>
 
-    <!--bill goes here-->
-    <div id="bill">
-        <h3>Enter the bill total:</h3>
-        $<input type="text" id="billInput" placeholder="00.00" required onkeypress="return isNumberKey(event,this)"
-            onkeyup="suggestedTips()">
-    </div>
-
-    <!--enter tip percentage-->
-    <div id="tip">
-        <h3>Enter the percentage that you would like to tip:</h3>
-        <input type="text" id="tipInput" placeholder=""
-            onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input>%
-    </div>
-
-    <!--enter how many people to split by-->
-    <div id="guests">
-        <h3>Enter the number of checks to split by:</h3>
-        <input type="number" id="checksInput" value="1">
-    </div>
-
-    <br>
-
-    <button type="submit" id="submit-btn">Calculate</button>
-
-    <br>
-    <div id="singleBill">
-        <!--display tip total-->
-        <div id="singleTip">
-            <h3>Tip Total:</h3>
+        <!--bill goes here-->
+        <div id="bill">
+            <h3>Enter the bill total:</h3>
+            $<input type="text" id="billInput" placeholder="00.00" required onkeypress="return isNumberKey(event,this)"
+                onkeyup="suggestedTips()">
         </div>
+
+        <!--enter tip percentage-->
+        <div id="tip">
+            <h3>Enter the percentage that you would like to tip:</h3>
+            <input type="text" id="tipInput" placeholder=""
+                onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input>%
+        </div>
+
+        <!--enter how many people to split by-->
+        <div id="guests">
+            <h3>Enter the number of checks to split by:</h3>
+            <input type="number" id="checksInput" value="1">
+        </div>
+
         <br>
-        <!--display tip + bill-->
-        <div id="singleTotal">
-            <h3>Total Payment:</h3>
-        </div>
-    </div>
 
-    <br>
-    <div id="multipleBill">
-        <div id="multipleTip">
-            <h3>Tip Per Person:</h3>
-        </div>
+        <button type="submit" id="submit-btn">Calculate</button>
+
         <br>
-        <div id="multipleTotal">
-            <h3>Total Per Person:</h3>
+        <div id="singleBill">
+            <!--display tip total-->
+            <div id="singleTip">
+                <h3>Tip Total:</h3>
+            </div>
+            <br>
+            <!--display tip + bill-->
+            <div id="singleTotal">
+                <h3>Total Payment:</h3>
+            </div>
         </div>
-    </div>
 
-    <div id="suggestedTips">
-        <h3>Suggested Tips:</h3>
-        <p id="tenPercent">10%: </p>
-        <p id="fifteenPercent">15%: </p>
-        <p id="eighteenPercent">18%: </p>
-        <p id="twentyPercent">20%: </p>
+        <br>
+        <div id="multipleBill">
+            <div id="multipleTip">
+                <h3>Tip Per Person:</h3>
+            </div>
+            <br>
+            <div id="multipleTotal">
+                <h3>Total Per Person:</h3>
+            </div>
+        </div>
+        <!--end of container 1-->
+    </div>
+    <br>
+    <div id="container2">
+        <div id="suggestedTips">
+            <h3>Suggested Tips:</h3>
+            <p id="tenPercent">10%: </p>
+            <p id="fifteenPercent">15%: </p>
+            <p id="eighteenPercent">18%: </p>
+            <p id="twentyPercent">20%: </p>
+        </div>
     </div>
 
 </body>
